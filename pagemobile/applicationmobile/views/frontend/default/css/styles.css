@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'fc_lamoonbold';
+  src: url('fc_lamoon_bold_ver_1.00-webfont.eot');
+  src: url('fc_lamoon_bold_ver_1.00-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fc_lamoon_bold_ver_1.00-webfont.woff2') format('woff2'),
+  url('fc_lamoon_bold_ver_1.00-webfont.woff') format('woff'),
+  url('fc_lamoon_bold_ver_1.00-webfont.ttf') format('truetype'),
+  url('fc_lamoon_bold_ver_1.00-webfont.svg#fc_lamoonbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'fc_lamoonregular';
+  src: url('fc_lamoon_regular_ver_1.00-webfont.eot');
+  src: url('fc_lamoon_regular_ver_1.00-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fc_lamoon_regular_ver_1.00-webfont.woff2') format('woff2'),
+  url('fc_lamoon_regular_ver_1.00-webfont.woff') format('woff'),
+  url('fc_lamoon_regular_ver_1.00-webfont.ttf') format('truetype'),
+  url('fc_lamoon_regular_ver_1.00-webfont.svg#fc_lamoonregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}

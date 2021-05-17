@@ -1,0 +1,102 @@
+
+<div id="webboard">
+<?php
+$mod=EscapeValue(decode64($_GET['_mod']));
+$tablename="tb_wb_mas";
+!empty($_GET['no'])?$no=$_GET['no']:null;
+!empty($_GET['type'])?$type=decode64($_GET['type']):null;
+if($type=="addnew"){
+	include"modules/webboard/webboard_add.php";
+}elseif($type=="view"){
+	include"modules/webboard/webboard_view.php";
+}else{
+	?>
+	<p style="margin-left:10px;"><img src="images/component/add_24.png"/>&nbsp;<?php echo"<a class=\"book\" href=\"index.php?_mod=".encode64($mod)."&type=".encode64('addnew')." \">เพิ่มกระทู้ใหม่</a>";?></p>
+	<?php
+	############################# แบ่งหน้าเพื่อให้แสดงผลรวดเร็ว #######################
+	$pagelen = 20; //จำนวนที่แสดงผลข้อมูลต่อหน้า
+	$range = 4 ; // ใส่จำนวนที่จะแสดงข้าง เลขปัจจุบัน ก็คือ ถ้าใส่ 2 แล้ว ตอนนี้แสดงอยู่หน้า 4 ก็จะเป็น 2 3 4 5 6 จะแสดงข้างเลข 4 อยู่ 2 จำนวน
+	$page = EscapeValue($_GET['page']); //รับค่าตัวแปร page แบบ get
+	if(empty($page)){ $page=1; } //ถ้าตัวแปรเพจยังไม่มี ให้ค่าเริ่มต้นของ $page เป็น 1
+	$sql = "select wid from $tablename Where status='1'"; //คิวรี่ข้อมูล เพื่อหาจำนวน แถว Comment ควร select แค่ ฟิวส์เดียว จะทำให้ทำงานได้ไวกว่า
+	$result = rsQuery($sql)or die(mysqli_error());
+	$totalrecords= $num_rows = mysqli_num_rows($result); //หาจำนวนแถวของขัอมูลทั้งหมด
+	$totalpage = ceil($num_rows / $pagelen);
+	$goto = ($page-1) * $pagelen; // หาหน้าที่จะกระโดดไป
+	$start = $page - $range;
+	$end = $page + $range;
+	if ($start <= 1) {
+		$start = 1;
+	}
+	if ($end >= $totalpage) {
+		$end = $totalpage;
+	}
+	$sql = "select * from $tablename Where status='1' order by wid DESC Limit $goto,$pagelen"; //ทำการแสดงผลโดยใช้คำสั่ง Limit เพื่อแสดงจำนวนข้อมูลต่อหน้า
+	$result_reply = rsQuery($sql);
+	
+	/*คิวรี่ข้อมูลออกมาเพื่อแสดงผล */
+	//$sql="Select * From ".$tablename." Where status='1'  Order by no DESC Limit $start1,$limit";
+	$sql1=$sql;
+	$Query = rsQuery($sql1); //คิวรี่คำสั่ง
+//	$totalp = mysqli_num_rows($Query); // หาจำนวน record ที่เรียกออกมา
+	if($totalrecords==0){
+		echo"<p align=\"center\">- - - - - - - - - - ยังไม่มีข้อมูล- - - - - - - - - -</p><BR><BR><BR><BR>";
+		/*	วนลูปข้อมูล */
+	}else{
+		$i=$start;
+		echo "<table width='100%'>";
+		echo "<tr><th width=85% align=left>หัวข้อ</th><th width=15% align=center>ตอบ</th></tr>";
+
+		while($arr = mysqli_fetch_array($Query)){
+			$cdate=$arr['createdate'];
+			if($cdate==null){
+				$dt=DateThai($arr['datepost']);
+			}else{
+				$dt=DateTimeThai($arr['createdate']);
+			}
+			echo"<tr><td ><a href=\"index.php?_mod=".encode64($mod)."&type=".encode64('view')."&no=".encode64($arr['wid'])."\">";
+			echo $arr['subject']."</a><br><font id=text-clay>&nbsp;&nbsp;โดย :".$arr['postby']."&nbsp;&nbsp;".$dt."</font></td>";
+			$sql="Select * From tb_wb_sub Where wid='".$arr['wid']."'";
+			$crs=rsQuery($sql);
+			$num=mysqli_num_rows($crs);
+			if($num==0){
+				echo"<td align=center ><font style=\"color:red;\">$num</font><?td>";
+			}else{
+				echo"<td align=center ><font >$num</font></td>";
+			}
+			echo"</tr>";
+		}
+		echo "</table>";
+	}
+echo"<p style=\"text-align:center;margin-left:45px;padding-bottom:10px;\">";
+echo "";
+if ($page > 1) {
+$back = $page - 1;
+echo "<a href=$PHP_SELF?_mod=".encode64($mod)."&page=1><img src=\"images/bt_first.png\" style=\"width:50px;height:25px;border:0;vertical-align: text-bottom;\" align=top></a>&nbsp;&nbsp;";
+echo "<a href=$PHP_SELF?_mod=".encode64($mod)."&page=$back><img src=\"images/bt_prev.png\" style=\"width:50px;height:25px;border:0;vertical-align: text-bottom;\"></a>&nbsp;&nbsp;";
+if ($start > 1) { echo "....."; }
+}
+$icount=1;
+For ($i=$start ; $i<=$end ; $i++) {
+$bgcolor = ($icount% 2)? '#0080ff' : '#ff0000'; //แสดงสีสลับเมื่อ ค่า i เพิ่มค่าไปเรื่อย ๆ
+if ($i == $page ) {
+echo "&nbsp;<b><font color=#787a8d>[".$i."]</font></b>&nbsp;" ;
+} else {
+echo "&nbsp;<a href=$PHP_SELF?_mod=".encode64($mod)."&page=".$i." style=\"color:$bgcolor\"><font color=$bgcolor>".$i."</font></a>&nbsp;" ;
+}
+$icount++;
+}
+if ($page < $totalpage) {
+$next = $page +1;
+if ($end < $totalpage) { echo "....."; }
+echo "&nbsp;&nbsp;<a href=$PHP_SELF?_mod=".encode64($mod)."&page=$next><img src=\"images/bt_next.png\" style=\"width:50px;height:25px;border:0;vertical-align: text-bottom;\"></a>";
+echo "&nbsp;<a href=$PHP_SELF?_mod=".encode64($mod)."&page=$totalpage><img src=\"images/bt_last.png\" style=\"width:50px;height:25px;border:0;vertical-align: text-bottom;\"></a>";
+}
+echo "</p>";
+
+}?>
+
+
+<BR><BR><BR>
+
+</div>

@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'fc_lamoonbold';
+    src: url('fc_lamoon_bold_ver_1.00-webfont.eot');
+    src: url('fc_lamoon_bold_ver_1.00-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fc_lamoon_bold_ver_1.00-webfont.woff2') format('woff2'),
+    url('fc_lamoon_bold_ver_1.00-webfont.woff') format('woff'),
+    url('fc_lamoon_bold_ver_1.00-webfont.ttf') format('truetype'),
+    url('fc_lamoon_bold_ver_1.00-webfont.svg#fc_lamoonbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'fc_lamoonregular';
+    src: url('fc_lamoon_regular_ver_1.00-webfont.eot');
+    src: url('fc_lamoon_regular_ver_1.00-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fc_lamoon_regular_ver_1.00-webfont.woff2') format('woff2'),
+    url('fc_lamoon_regular_ver_1.00-webfont.woff') format('woff'),
+    url('fc_lamoon_regular_ver_1.00-webfont.ttf') format('truetype'),
+    url('fc_lamoon_regular_ver_1.00-webfont.svg#fc_lamoonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#title-text {
+    padding-top: 5%;
+    white-space: nowrap;
+    font-family: 'FC Lamoon',Sans-Serif;
+    font-weight: bold;
+    color: #024eb0;
+    font-size: 50px;
+    text-shadow: 0px 0px 8px white;
+}
+
+.menu_top {
+    margin-left: 0%;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 70px;
+    z-index: 1000;
+    padding-bottom: 10px;
+    float: right;
+
+}
+
+
+
+
+.head-logo {
+    width: 100%;
+    padding-left: 10%;
+    padding-bottom: 10px;
+    float: left;
+}
+
+ul.top-level {
+    background: white;
+    width: 100%;
+    height: 60px;
+    margin-left: 0%;
+
+
+}
+
+ul.top-level li {
+    display: inline-block;
+    padding: 18px 0;
+    height: 60px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+ul.top-level li a {
+    color: black;
+    font-weight: 700 ;
+    text-decoration: none;
+    font-size: 12pt;
+    padding-left: 2%;
+}
+
+ul.top-level li a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav {
+    background-color: white;
+}
+
+#main {
+    position: absolute;
+    top: 12%;
+}
+
+body {
+
+}
+
+.tab-pane {
+    display: none;
+
+}
+
+.tab-pane li a {
+    font-size: 13px;
+}
+
+.tab-pane.current {
+    display: block;
+    border-radius: 5px 5px 25px 25px;
+    box-shadow: 0 5px 20px #000000;
+}
+
+#menu-phone-div {
+    display: none;
+}
+
+.goog-te-banner-frame {
+    z-index: 1;
+}
+
+#google_translate_element {
+    z-index: 1;
+}
+
+.tab-menu {
+    opacity: 0.9;
+    background-color: #FFE99F;
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 3%;
+    width: 80%;
+    min-height: 250px;
+    z-index: 1;
+    top: 10%;
+    padding: 15px 0 0 15px;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-bottom-width:10px ;
+    border-top-style: solid;
+    border-top-color: #FFD100;
+    border-top-width:7px ;
+}
+
+.tab-menu ul {
+    margin-left: -10px;
+}
+.tab-menu a:link ,a:visited {
+   text-decoration: none;
+    color: #341a00;
+}
+.tab-menu a:hover {
+    text-decoration: underline;
+}
+
+
+.nav.nav-tabs {
+    background-color: transparent;
+    border-bottom: 0;
+}
+
+.update-right p {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1150px) {
+    .head-logo {
+        display: none;
+    }
+
+    .menu_top {
+        display: none;
+
+    }
+    .nav {
+        margin-bottom: 0;
+    }
+
+    .nav2 {
+        margin-bottom: 0;
+        float: left;
+    }
+
+    #marquee-update {
+        display: none;
+    }
+
+    #menu-phone-div {
+        display: block;
+        top: 0;
+        right: auto;
+        left: auto;
+        width: 100%;
+    }
+
+    #main-dummy {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .phone-hide {
+        display: none;
+    }
+
+    .phone-show {
+        display: block;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+    .phone-hide {
+        display: none;
+    }
+
+    .phone-show {
+        display: block;
+    }
+    .pc-show{
+        display: block;
+    }
+    .pc-hide{
+        display: none;
+    }
+
+}
+
+
+@media only screen and (min-width: 1400px) {
+    ul.top-level {
+        margin-left: 0%;
+
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    ul.top-level {
+        margin-left:0%;
+
+
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    ul.top-level {
+        margin-left: 13%;
+    }
+}

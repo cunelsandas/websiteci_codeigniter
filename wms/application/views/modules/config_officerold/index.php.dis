@@ -1,0 +1,72 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 6/4/2561
+ * Time: 10:34
+ */
+?>
+
+<link rel="stylesheet" href="<?php echo base_url('assets/plugin/getorgchart/getorgchart.css'); ?>">
+<script src="<?php echo base_url('assets/plugin/getorgchart/getorgchart.js') ?>"></script>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card card-shadow">
+            <div class="card-header pt-3">
+                <h2><?php echo $head; ?></h2>
+            </div>
+            <div class="card-body">
+                <div id="chart-people" data-sourch=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var peopleElement = document.getElementById("chart-people");
+    var orgChart = new getOrgChart(peopleElement, {
+        // clickNodeEvent: clickHandler,
+        theme: "annabel",
+        enableEdit: false,
+        enableSearch: false,
+        primaryFields: ["ตำแหน่ง", "ชื่อ"],
+        photoFields: ["pic"],
+        dataSource: [{
+            id: 1,
+            parentId: null,
+            ชื่อ: "นายวิรวัฒน์ บัวติ๊บ",
+            ตำแหน่ง: "หัวหน้าสำนักปลัด",
+            pic: "<?php echo site_url('get_file/fd_ul/tb_header_1_1.jpg/header');?>"
+        }, {
+            id: 2,
+            parentId: 1,
+            ชื่อ: "นายกฤษฎากรณ์ ปวงคำไหล",
+            ตำแหน่ง: "หัวหน้าฝ่ายอำนวยการ",
+            pic: "<?php echo site_url('get_file/fd_ul/tb_header_2_1.jpg/header');?>"
+        }, {
+            id: 3,
+            parentId: 1,
+            ชื่อ: "นางจันทร์ฉาย ยามี",
+            ตำแหน่ง: "หัวหน้าฝ่ายบริหารงานทั่วไป",
+            pic: "<?php echo site_url('get_file/fd_ul/tb_header_3_1.jpg/header');?>"
+        }, {
+            id: 4,
+            parentId: 3,
+            ชื่อ: "พ.จ.ท.อนุสรณ์จันต๊ะเทพ",
+            ตำแหน่ง: "จพง.ป้องกันและบรรเทาสาธารณภัย ชำนาญงาน",
+            pic: "<?php echo site_url('get_file/fd_ul/tb_header_3_1.jpg/header');?>"
+        }, {
+            id: 5,
+            parentId: 3,
+            ชื่อ: "Evie Johnson",
+            ตำแหน่ง: "เจ้าหน้าที่",
+            pic: "<?php echo site_url('get_file/fd_ul/tb_header_3_1.jpg/header');?>"
+        }]
+    });
+
+    function clickHandler(sender, args) {
+        alert("clecked node.id " + args.node.id);
+    }
+
+    $('.get-blue.get-org-chart').css('background-color', 'transparent');
+    $('.get-image-pane').css('max-width', '230px');
+</script>

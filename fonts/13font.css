@@ -1,0 +1,424 @@
+@font-face {
+    font-family: 'TH SarabunPSK';
+    src: url('THSarabunPSK-BoldItalic.woff2') format('woff2'),
+        url('THSarabunPSK-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Chakra Petch';
+    src: url('THChakraPetch-Italic.woff2') format('woff2'),
+        url('THChakraPetch-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Kodchasal';
+    src: url('THKodchasal-Italic.woff2') format('woff2'),
+        url('THKodchasal-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH SarabunIT';
+    src: url('THSarabunIT.woff2') format('woff2'),
+        url('THSarabunIT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH NiramitIT';
+    src: url('THNiramitIT-Italic.woff2') format('woff2'),
+        url('THNiramitIT-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Baijam';
+    src: url('THBaijam.woff2') format('woff2'),
+        url('THBaijam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH KoHo';
+    src: url('THKoHo-BoldItalic.woff2') format('woff2'),
+        url('THKoHo-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Srisakdi';
+    src: url('THSrisakdi.woff2') format('woff2'),
+        url('THSrisakdi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH SarabunPSK';
+    src: url('THSarabunPSK.woff2') format('woff2'),
+        url('THSarabunPSK.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Fah kwang';
+    src: url('THFahkwang.woff2') format('woff2'),
+        url('THFahkwang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH K2D July8';
+    src: url('THK2DJuly8-Italic.woff2') format('woff2'),
+        url('THK2DJuly8-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH SarabunPSK';
+    src: url('THSarabunPSK-Bold.woff2') format('woff2'),
+        url('THSarabunPSK-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH SarabunIT';
+    src: url('THSarabunIT-Italic.woff2') format('woff2'),
+        url('THSarabunIT-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Niramit AS';
+    src: url('THNiramitAS-Bold.woff2') format('woff2'),
+        url('THNiramitAS-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Kodchasal';
+    src: url('THKodchasal-BoldItalic.woff2') format('woff2'),
+        url('THKodchasal-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Mali Grade 6';
+    src: url('THMaliGrade6-BoldItalic.woff2') format('woff2'),
+        url('THMaliGrade6-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Fah kwang';
+    src: url('THFahkwang-BoldItalic.woff2') format('woff2'),
+        url('THFahkwang-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Fah kwang';
+    src: url('THFahkwang-Bold.woff2') format('woff2'),
+        url('THFahkwang-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Krub';
+    src: url('THKrub.woff2') format('woff2'),
+        url('THKrub.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH KoHo';
+    src: url('THKoHo-Italic.woff2') format('woff2'),
+        url('THKoHo-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH SarabunIT';
+    src: url('THSarabunIT-BoldItalic.woff2') format('woff2'),
+        url('THSarabunIT-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH NiramitIT';
+    src: url('THNiramitIT-BoldItalic.woff2') format('woff2'),
+        url('THNiramitIT-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH KoHo';
+    src: url('THKoHo-Bold.woff2') format('woff2'),
+        url('THKoHo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Chakra Petch';
+    src: url('THChakraPetch-Bold.woff2') format('woff2'),
+        url('THChakraPetch-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Kodchasal';
+    src: url('THKodchasal-Bold.woff2') format('woff2'),
+        url('THKodchasal-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Charmonman';
+    src: url('THCharmonman-Bold.woff2') format('woff2'),
+        url('THCharmonman-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Baijam';
+    src: url('THBaijam-BoldItalic.woff2') format('woff2'),
+        url('THBaijam-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Krub';
+    src: url('THKrub-BoldItalic.woff2') format('woff2'),
+        url('THKrub-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Chakra Petch';
+    src: url('THChakraPetch.woff2') format('woff2'),
+        url('THChakraPetch.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH K2D July8';
+    src: url('THK2DJuly8-BoldItalic.woff2') format('woff2'),
+        url('THK2DJuly8-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Krub';
+    src: url('THKrub-Bold.woff2') format('woff2'),
+        url('THKrub-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH SarabunIT';
+    src: url('THSarabunIT-Bold.woff2') format('woff2'),
+        url('THSarabunIT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Mali Grade 6';
+    src: url('THMaliGrade6-Bold.woff2') format('woff2'),
+        url('THMaliGrade6-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Niramit AS';
+    src: url('THNiramitAS-BoldItalic.woff2') format('woff2'),
+        url('THNiramitAS-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Baijam';
+    src: url('THBaijam-Italic.woff2') format('woff2'),
+        url('THBaijam-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Niramit AS';
+    src: url('THNiramitAS.woff2') format('woff2'),
+        url('THNiramitAS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH SarabunPSK';
+    src: url('THSarabunPSK-Italic.woff2') format('woff2'),
+        url('THSarabunPSK-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Kodchasal';
+    src: url('THKodchasal.woff2') format('woff2'),
+        url('THKodchasal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH NiramitIT';
+    src: url('THNiramitIT.woff2') format('woff2'),
+        url('THNiramitIT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Baijam';
+    src: url('THBaijam-Bold.woff2') format('woff2'),
+        url('THBaijam-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Srisakdi';
+    src: url('THSrisakdi-Bold.woff2') format('woff2'),
+        url('THSrisakdi-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH K2D July8';
+    src: url('THK2DJuly8.woff2') format('woff2'),
+        url('THK2DJuly8.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Krub';
+    src: url('THKrub-Italic.woff2') format('woff2'),
+        url('THKrub-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Niramit AS';
+    src: url('THNiramitAS-Italic.woff2') format('woff2'),
+        url('THNiramitAS-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH KoHo';
+    src: url('THKoHo.woff2') format('woff2'),
+        url('THKoHo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Mali Grade 6';
+    src: url('THMaliGrade6-Italic.woff2') format('woff2'),
+        url('THMaliGrade6-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH NiramitIT';
+    src: url('THNiramitIT-Bold.woff2') format('woff2'),
+        url('THNiramitIT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Mali Grade 6';
+    src: url('THMaliGrade6.woff2') format('woff2'),
+        url('THMaliGrade6.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Fah kwang';
+    src: url('THFahkwang-Italic.woff2') format('woff2'),
+        url('THFahkwang-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH Charmonman';
+    src: url('THCharmonman.woff2') format('woff2'),
+        url('THCharmonman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Charm of AU';
+    src: url('THCharmofAU.woff2') format('woff2'),
+        url('THCharmofAU.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TH Chakra Petch';
+    src: url('THChakraPetch-BoldItalic.woff2') format('woff2'),
+        url('THChakraPetch-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TH K2D July8';
+    src: url('THK2DJuly8-Bold.woff2') format('woff2'),
+        url('THK2DJuly8-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+
+ <body>
+  <?php
+	$btname="addnew";
+	$v_id="";
+	$v_name="";
+	$btname="addnew";
+	$modid=$_GET['_modid'];
+	$modname=FindRS("select modname from tb_mod where modid=$modid","modname");
+
+
+		$tablename="tb_accident_time";
+
+		if(isset($_GET['del'])){
+		$sql="DELETE From $tablename Where id='".$_GET['del']."'";
+		$rs=rsQuery($sql);
+		if($rs){
+				// update table tb_trans บันทึกการลบ
+		$updatetran=UpdateTrans('$tablename','delete',$_SESSION['username'],'ID:'.$id);
+			echo"<script>window.location.href='accident_time?_modid=".$modid."&_mod=".$_GET['_mod']."';</script>";
+		}
+	}
+		if(isset($_POST['btsave'])){
+			$btname=$_POST['btsave'];
+			$id=$_POST['editid'];
+			$name=$_POST['txtname'];
+			if($btname=="addnew"){
+				$sql="insert into $tablename(name) values('$name')";
+			}
+			if($btname=="edit"){
+				$sql="update $tablename SET name='$name' Where id='$id'";
+			}
+			$rsupdate=rsQuery($sql);
+			if($rsupdate){
+				$updatetran=UpdateTrans($tablename,'add',$_SESSION['username'],'ID:'.$id);
+				
+				echo"<script>alert('บันทึกข้อมูลเรียบร้อย');window.location.href='accident_time?_modid=".$modid."&_mod=".$_GET['_mod']."';</script>";
+			}
+
+		}
+
+		if(isset($_GET['id'])){
+				$sql="select * from $tablename where id=".$_GET['id'];
+				$rs=rsQuery($sql);
+				if($rs){
+					$vdata=mysqli_fetch_assoc($rs);
+					$v_id=$vdata['id'];
+					$v_name=$vdata['name'];
+				}
+				$btname="edit";
+		}
+  ?>
+  <div class="card card-shadow" id="CardDetail">
+      <div class="card-header">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h4><?php $head ="ระบบบันทึกสถิติอุบัติเหตุ";
+                      echo $head; ?></h4>
+              </div>
+          </div>
+      </div>
+      <div class="card-body">
+          <div class="row mb-2">
+              <div class="col-lg-12">
+              </div>
+          </div>
+          <div>
+          </div>
+      </div>
+	<form name="frmadd" method="POST" action="">
+		<div id="master-table">
+		<table class="content-input" style="width: 100%">
+			<tr>
+				<th>ชื่อ</th><td><input type="text" name="txtname" value="<?php echo $v_name;?>"></td>
+			</tr>
+			<tr>
+				<td></td><td><input type="submit" name="btsave" value="<?php echo $btname;?>"><input type="hidden" name="editid" value="<?php echo $v_id;?>"</td>
+			</tr>
+		</table>
+		</div>
+	</form>
+	<br>
+		<div id="master-table" style="width: 100%">
+			<table class="content-table" style="width: 100%">
+				<tr>
+					<th>รายการ</th><th>จัดการ</th>
+				</tr>
+				<?php
+					$strsql="select * from $tablename order by id";
+					$rs=rsQuery($strsql);
+					if($rs){
+						while($data=mysqli_fetch_assoc($rs)){
+							$id=$data['id'];
+							$name=$data['name'];
+							echo "<tr><td>$name</td><td><a class=\"btn btn-warning btn-sm text-white\" href=\"accident_time?_modid=".$modid."&_mod=".$_GET['_mod']."&type=time&id=".$id."\"><i class=\"fa fa-edit btn-add\"></i></a>&nbsp;&nbsp;&nbsp;
+                            <a class=\"btn btn-danger btn-sm text-white\" href=\"accident_time?_modid=".$modid."&_mod=".$_GET['_mod']."&type=time&del=".$id."\" onclick=\"return confirm('คุณต้องการลบรายการนี้ใช่หรือไม่?');\"><i class=\"fa fa-trash-o btn-remove\"></i></a></td></tr>";
+						}
+					}
+				?>
+				</table>
+			</div>
+ </body>
+</html>
+
+
+

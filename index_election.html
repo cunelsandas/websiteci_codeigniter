@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+<style>
+    @import url(font/thsarabunnew.css);
+
+    body {
+        background-image: url("bg-election.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #ffd454;
+        align-items: center;
+        display: flex;
+        font-family: 'Prompt', sans-serif;
+    }
+
+    .container {
+        color: #333;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h1 {
+        font-weight: normal;
+        letter-spacing: .125rem;
+        text-transform: uppercase;
+    }
+
+    li {
+        display: inline-block;
+        font-size: 1.5em;
+        list-style-type: none;
+        padding: 1em;
+        text-transform: uppercase;
+    }
+
+    li span {
+        display: block;
+        font-size: 4.5rem;
+    }
+
+    .message {
+        font-size: 4rem;
+    }
+
+    #content {
+        display: none;
+        padding: 1rem;
+    }
+
+    .emoji {
+        padding: 0 .25rem;
+    }
+
+    @media all and (max-width: 768px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        li {
+            font-size: 1.125rem;
+            padding: .75rem;
+        }
+
+        li span {
+            font-size: 3.375rem;
+        }
+    }
+
+</style>
+<html>
+<head>
+    <title> เทศบาลตำบลแม่แรม อำเภอแม่ริม จังหวัดเชียงใหม่ </title>
+    <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+<body>
+<div>
+    <a href="default.php"> <div class="center"><img src="entersite2.png" style="width: 20%;height: auto;position: absolute;margin-top: 25%;margin-left: 40%"></div></a>
+</div>
+
+<div class="container" style="margin-top: 30%;">
+    <h1 id="headline" style="font-family: 'Prompt', sans-serif;margin-left: 5%">นับถอยหลังสู่วันเลือกตั้งเทศบาล</h1>
+    <div id="countdown">
+        <ul>
+            <li><span id="days" style="background-color: white;border-radius:12px;padding: 8px;"></span>วัน</li>
+            <li><span id="hours" style="background-color: white;border-radius:12px;padding: 8px; "></span>ชั่วโมง</li>
+            <li><span id="minutes" style="background-color: white;border-radius:12px;padding: 8px; "></span>นาที</li>
+            <li><span id="seconds" style="background-color: white;border-radius:12px;padding: 8px; "></span>วินาที</li>
+        </ul>
+    </div>
+    <div class="message">
+<!--        <div id="content">-->
+<!--            <span class="emoji">🥳</span>-->
+<!--            <span class="emoji">🎉</span>-->
+<!--            <span class="emoji">🎂</span>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+<script type="text/javascript">
+    (function () {
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        let birthday = "Mar 28, 2021 08:00:00",
+            countDown = new Date(birthday).getTime(),
+            x = setInterval(function () {
+
+                let now = new Date().getTime(),
+                    distance = countDown - now;
+
+                document.getElementById("days").innerText = Math.floor(distance / (day)),
+                    document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                    document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                    document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+                //do something later when date is reached
+                if (distance < 0) {
+                    let headline = document.getElementById("headline"),
+                        countdown = document.getElementById("countdown"),
+                        content = document.getElementById("content");
+
+                    headline.innerText = "นับถอยหลังสู่วันเลือกตั้งเทศบาล";
+                    countdown.style.display = "none";
+                    content.style.display = "block";
+
+                    clearInterval(x);
+                }
+                //seconds
+            }, 0)
+    }());
+</script>
+<div>
+<!--     <a href="default.php"> <div class="center"><img src="entersite2.png.png" style="width: 100%;margin-left: 100%;margin-top: -100%"></div></a>-->
+
+    <!-- <p>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;-->
+
+    <!--  <br>-->
+    <!--  <br>-->
+    <!--  <br>-->
+
+
+    <!--  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <!--  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+    <!--  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ด้วยเกล้าด้วยกระหม่อม-->
+    <!--  <br>-->
+
+    <!--  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้าพระพุทธเจ้า ผู้บริหาร สมาชิกสภา ข้าราชการ และพนักงาน-->
+    <!--  <br>-->
+    <!--  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -->
+    <!--  เทศบาลเมืองเมืองแกนพัฒนา จังหวัดเชียงใหม่ </p>-->
+    <!-- <br>-->
+    <!-- <p><a href="index.php"></a></p>-->
+
+</div>
+
+
+</body>
+</html>

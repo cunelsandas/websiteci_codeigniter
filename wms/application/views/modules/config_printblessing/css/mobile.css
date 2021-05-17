@@ -1,0 +1,267 @@
+@import url(../font/thsarabunnew.css);
+@import url(../font/th_niramit_as.css);
+@import url(../font/th_k2d_july8.css);
+@import url(../font/th_chakra_petch.css);
+@import url(../font/th_baijam.css);
+@import url("orgchart.css");
+
+@import url("tabcontent_mobile.css");
+@import url(../nivo-slider/default/default.css);
+@import url(../nivo-slider/nivo-slider.css);
+
+/*@media screen and (max-device-width: 480px) and (max-device-width : 1024px)  {
+*/
+@media only screen and (min-width: 240px) and (max-width: 1024px), only screen and (min-device-width: 240px) and (max-device-width: 1024px) {
+ 
+
+/*@media screen and (max-device-width: 480px) and (orientation: portrait){
+*/
+  /* some CSS here */
+  body{
+		font-family:THSarabunNew;
+		font-size:14px;
+		color:black;
+		background-color:#330000;
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+  }
+  a:link {
+    color: #35608e;
+	text-shadow:5px 5px 10px #8c8c8c;
+	font-size:16px;
+	font-style:bold;
+}
+
+/* visited link */
+a:visited {
+     color: #35608e;
+}
+
+.banner_title{
+	max-width:90%;
+	background-color:white;
+	padding:8px 15px;
+	font-size:16px;
+	font-style:bold;
+	color:red;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#subject{
+	word-wrap:break-word;
+	background-color:white;
+}
+.polaroid {
+	margin:10px 2px;;
+    max-width: 45%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display:inline-block !important;
+}
+
+.polaroid img {width: 100%}
+
+.polaroid_text {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.textbox{
+	 width: 98%;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.textbox_text{
+	text-align: left;
+    padding: 10px 20px;
+	
+	border-bottom:1px dashed #ffffcc;
+	
+	
+}
+.row_count{
+	position:absolute;
+	top:1px;
+	right:0px;
+	padding:2px;
+	background-color:red;
+	width:15px;
+	height:20px;
+	color:white;
+	text-align:center;
+
+}
+/* selected link */
+a:active {
+    color: red;
+}
+  #containner{
+	max-width:100%;
+	background-color:#e5e5e5;
+  }
+  #header{
+	/*background:url('../images/header_mobile.jpg')no-repeat top center;
+	width:320px;
+	height:200px;
+	*/
+	background-color:#330000;
+	color:white;
+	width:100%;
+	height:100px;
+
+}
+  #content{
+	width:100%;
+
+	}
+#bottom{
+	width:100%;
+	height:200px;
+	background:url('../images/bottom_mobile.jpg') no-repeat  center center;
+}
+
+
+
+#sidemenu	ul{
+		/*width:100%; */
+		list-style:none;
+		margin-left: 0;
+		padding:0;
+	}
+
+#sidemenu li{
+	
+		width:95%;
+		border:1px solid #9a9a9a;
+		background-color:#952642; 
+		height:150%;
+		line-height:150%;
+		border-radius:0px;
+		-webkit-border-radius:0px;
+		padding:8px 0px 8px 15px;
+		margin-bottom:2px;
+
+	}
+#sidemenu a{
+	color:white;
+	text-decoration:none;
+}
+#sidemenu .toggle {
+	width:95%;
+		color:white;
+		border:1px solid white;
+		background-color:#000000;
+		height:150%;
+		line-height:150%;
+		border-radius:0px;
+		-webkit-border-radius:0px;
+		padding:8px 0px 8px 15px;
+		
+	}
+		ul.overview{
+		width:90%;
+		list-style:none;
+		margin-left: 0;
+		padding:0;
+	}
+
+ .overview li{
+	
+		width:90%;
+		border:1px solid white;
+		background-color:#5b96b9;
+		height:150%;
+		line-height:150%;
+		border-radius:6px;
+		-webkit-border-radius:6px;
+		
+	}
+
+#data_image img{
+	margin-bottom:30px;
+}
+
+
+img{
+	max-width:340px;
+	margin-bottom:5px;
+}
+table, tr, td{
+	max-width:100%;
+	word-wrap:break-word;
+	}
+#master-table{
+	padding:5px;
+	
+}
+#master-table table{
+	max-width:90%;
+	box-shadow:5px 5px 10px #000000;
+	
+	
+}
+
+#master-table th{
+	font-weight:bold;
+	color:#ffffcc;
+	padding:15px 10px 10px;
+	background:#525252;
+	border-collapse:collapse;
+	
+	
+	}
+#master-table tr:hover{
+cursor:pointer;
+}
+#master-table tbody{background:#364452;}
+#master-table td{color:#ffffcc;border-top:1px dashed #fff;padding:10px;}
+#master-table tbody tr:hover td{
+	color:#000000;
+	background:#e4e4e4;
+	
+}
+#master-table a{
+	color:black;
+	}
+#nayok{
+	background:url('../images/nayok.png') no-repeat center center;
+	width:340px;
+	height:400px;
+
+}
+
+
+#menu_mobile{
+	width:100%;
+	background-color:white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#menu_mobile ul{
+		width:100%;
+		list-style:none;
+		margin-left: 0;
+		padding:0;
+		background-color:#d7d7d7;
+	}
+
+#menu_mobile li{
+	
+		width:90%;
+		border:1px solid white;
+		background-color:#297a76;
+		height:150%;
+		line-height:150%;
+		border-radius:6px;
+		-webkit-border-radius:6px;
+		padding:10px 15px;
+	}
+#menu_mobile a{
+	color:white;
+	text-decoration:none;
+	
+}
+
+}
+
+
+

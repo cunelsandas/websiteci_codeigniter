@@ -1,0 +1,167 @@
+/*  full slide show */
+#fullscreenslider{
+	width:1263px;
+	height:550px;
+	top: 0px;
+	left:0px;
+   
+   margin:auto;
+	position:relative;
+	z-index:2;
+}
+
+/* css CSSfullscreenslider from file style1.css */
+.cb-slideshow,
+.cb-slideshow:after { 
+   position:absolute;
+	
+    width: 100%;
+    height: 100%;   /* กำหนดความสูงของภาพสไลด์ */
+    top:0px;
+	left:0px;
+  /*  left: 0px; */
+  margin:auto;
+  
+   
+}
+
+.cb-slideshow:after { 
+	
+    content: '';
+    /*background: transparent url(../images/pattern.png) repeat top left; */
+
+}
+	.cb-slideshow li{
+	list-style-type:none;
+	}
+
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 0 }
+}
+/* Animation for the title */
+@-webkit-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow li div h3 { font-size: 80px }
+}
+@media only screen and (max-width: 767px) {
+	.cb-slideshow { display: none;}
+}
+
+.opacity-table{
+	padding:5px;	
+
+}
+.opacity-table table{
+	width:90%;
+	box-shadow:5px 5px 10px #ffccff;
+	
+	
+}
+
+.opacity-table th{
+	font-weight:bold;
+	color:#ffffcc;
+	padding:15px 10px 10px;
+	background:#0080ff;
+	border-collapse:collapse;
+	
+	
+	}
+.opacity-table tr:hover{
+cursor:pointer;
+}
+.opacity-table tr{background:#c1e0ff;opacity:0.7;}
+.opacity-table td{color:#669;border-top:1px dashed #fff;padding:10px;}
+.opacity-table tbody tr:hover{
+	color:#000000;
+	background:#e4e4e4;
+	opacity:1;
+}
+.opacity-table a{
+	color:black;
+	}
